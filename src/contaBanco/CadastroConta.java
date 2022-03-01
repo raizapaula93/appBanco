@@ -10,7 +10,7 @@ public class CadastroConta {
 
 	private double saldo;
 	
-	private boolean contaAberta;
+	private boolean contaAberta = false;
 
 
 	public boolean abrirConta;//
@@ -54,25 +54,18 @@ public class CadastroConta {
 	}
 	
 	public boolean getcontaAberta() {
-		return this.contaAberta = false;
+		return this.contaAberta;
 	}
 	
 	public void setcontaAberta(boolean contaAberta) {
 		this.contaAberta = contaAberta;
 	}
-
-	public void status() {
-		System.out.println("SOBRE A CONTA: "); 
-		System.out.println("Nº da conta: " + this.getNumConta());
-		System.out.println("Tipo de Conta: "+ this.getTipoConta());
-		System.out.println("Dono: "+ getDono());
-		System.out.println("Saldo " + getSaldo());
-		System.out.println("A conta está aberta? " + getcontaAberta());
-	}
-
-	
+			
 	public void abrirConta() {
-		this.contaAberta=true;
+		this.contaAberta = true;
+			if (this.contaAberta == true) {
+				System.out.println("Favor, cadastrar os dados da conta: ");
+			}
 	}
 	
 	public void fecharConta() {
@@ -87,8 +80,15 @@ public class CadastroConta {
 			else {
 				System.out.println("A conta está fechada.");
 			}
-		
-		}
+			}
+	public void status() {
+		System.out.println("SOBRE A CONTA: "); 
+		System.out.println("Nº da conta: " + this.getNumConta());
+		System.out.println("Tipo de Conta: "+ this.getTipoConta());
+		System.out.println("Dono: "+ getDono());
+		System.out.println("Saldo " + getSaldo());
+		System.out.println("A conta está aberta? " + getcontaAberta());
 	}
+}
 	
 
