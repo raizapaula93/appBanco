@@ -35,6 +35,12 @@ public class CadastroConta {
 
 	public void setTipoConta(String tipoConta) {
 		this.tipoConta = tipoConta;
+			if(this.tipoConta=="CC") {
+				this.setSaldo(50.0);
+			}
+			if(this.tipoConta=="CP") {
+				this.setSaldo(120.0);
+			}
 	}
 
 	public String getDono() {
@@ -45,8 +51,9 @@ public class CadastroConta {
 		this.dono = dono;
 	}
 
+	
 	public double getSaldo() {
-		return saldo;
+		return this.saldo;
 	}
 
 	public void setSaldo(double saldo) {
